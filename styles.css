@@ -65,7 +65,9 @@ body {
   color: #fbdc6a;
 }
 .rightsection img {
-  padding: 10%;
+  position: relative;
+  left: 12%;
+  top: 5%;
 }
 .leftsection img {
   width: 200%;
@@ -113,11 +115,9 @@ body {
   }
   .hero > div + .rightsection {
     width: 100%;
-    padding-left: 10%;
+    padding-right: 10%;
   }
-  .rightsection img {
-    padding: 0%;
-  }
+
   .redcircle {
     width: 30%;
     position: absolute;
@@ -145,7 +145,7 @@ body {
   }
 
   .navbar nav a {
-    font-size: 1em;
+    font-size: 1.2em;
     margin: 0 10px;
   }
 }
@@ -162,11 +162,9 @@ body {
   }
   .hero > div + .rightsection {
     width: 100%;
-    padding-left: 10%;
+    padding-right: 10%;
   }
-  .rightsection img {
-    padding: 0%;
-  }
+
   .hello {
     font-size: 1.8rem;
   }
@@ -180,8 +178,21 @@ body {
   }
 
   .navbar nav a {
-    font-size: 0.9em;
-    margin: 0 8px;
+    font-size: 1em;
+    margin: 0 6px;
+  }
+}
+@media (max-width: 380px) {
+  .navbar nav a {
+    font-size: 0.8em;
+    margin: 0 4px;
+  }
+  .redcircle {
+    width: 45%;
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    z-index: -1;
   }
 }
 /*About section*/
@@ -192,7 +203,6 @@ body {
   display: flex;
   justify-content: space-around;
   margin: 23px 0;
-  height: 50hv;
   text-shadow: 2px 2px 2px #090a0e;
 }
 .aboutme > div {
@@ -265,7 +275,6 @@ body {
   justify-content: space-around;
   margin: 0px 0;
   height: 50hv;
-  text-shadow: 2px 2px 2px #090a0e;
 }
 .education > div {
   width: 50%;
@@ -285,6 +294,7 @@ body {
   color: #fbdc6a;
   margin: 10px;
   padding: 50px 0;
+  text-shadow: 2px 2px 2px #090a0e;
 }
 .clg {
   color: #fbdc6a;
@@ -366,7 +376,7 @@ body {
 }
 .skright {
   background-color: #fbdc6a;
-  color: #b12b24;
+  color: #fbdc6a;
   font-size: 1rem;
   justify-content: center;
   border-radius: 30px 0 0 30px;
@@ -377,20 +387,21 @@ body {
   width: 80%;
   padding: 0 10%;
   margin: 10%;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #090a0e;
+  background-color: #b12b24;
 }
 
 .skill1,
 .skill2,
 .skill3,
 .skill4 {
-  background-color: #fbdc6a;
   padding-top: 20px;
 }
 .skill1 ul,
 .skill2 ul,
 .skill3 ul,
 .skill4 ul {
-  background-color: #fbdc6a;
   padding: 10px;
   margin: 5px 0;
   list-style: none;
@@ -424,7 +435,7 @@ body {
   justify-content: space-around;
   margin: 23px 0;
   height: 50hv;
-  text-shadow: 2px 2px 2px #090a0e;
+  text-shadow: 0.3px 0.2px 0.2px #090a0e;
 }
 .projects > div {
   width: 50%;
@@ -444,7 +455,7 @@ body {
 }
 .prright {
   background-color: #b12b24;
-  color: #fbdc6a;
+  color: #b12b24;
   font-size: 1rem;
   justify-content: center;
   border-radius: 30px 0 0 30px;
@@ -459,7 +470,7 @@ body {
 .p1,
 .p2,
 .p3 {
-  background-color: #b12b24;
+  background-color: #fbdc6a;
   padding: 10px 0;
   border-radius: 20px;
   box-shadow: 5px 5px 5px #090a0e;
@@ -467,13 +478,11 @@ body {
 .p1 > h3,
 .p2 > h3,
 .p3 > h3 {
-  background-color: transparent;
   padding-top: 20px;
 }
 .p1 > p,
 .p2 > p,
 .p3 > p {
-  background-color: transparent;
   padding-bottom: 20px;
 }
 /* Responsive adjustments */
@@ -506,7 +515,6 @@ body {
   justify-content: space-around;
   margin: 23px 0;
   width: 100%;
-  text-shadow: 2px 2px 2px #090a0e;
 }
 .project > div {
   height: 50hv;
@@ -572,8 +580,8 @@ body {
 .btn {
   background-color: #fbdc6a;
   color: #b12b24;
-  padding: 12px 24px;
-  font-size: 16px;
+  padding: calc(1vw + 8px) calc(2vw + 4px);
+  font-size: calc(0.8vw + 8px);
   font-weight: bold;
   letter-spacing: 1px;
   border: none;
@@ -698,8 +706,8 @@ body {
 .btn2 {
   background-color: #b12b24;
   color: #fbdc6a;
-  padding: 12px 24px;
-  font-size: 16px;
+  padding: calc(1vw + 8px) calc(2vw + 4px);
+  font-size: calc(0.8vw + 8px);
   font-weight: bold;
   letter-spacing: 1px;
   border: none;
@@ -858,16 +866,30 @@ footer a:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease-in-out;
 }
-
+.clg > div h3,
+.clg > div p {
+  pointer-events: none;
+  text-shadow: 2px 2px 2px #090a0e;
+}
 .edu:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease-in-out;
 }
-.prright :hover {
+.prright > div {
+  cursor: pointer;
+}
+
+.prright > div:hover {
   background-color: #f4483f;
   transform: scale(1.05);
   transition: transform 0.3s ease-in-out;
 }
+
+.prright > div h3,
+.prright > div p {
+  pointer-events: none;
+}
+
 .contact-form-container:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   transform: translateY(-5px);
