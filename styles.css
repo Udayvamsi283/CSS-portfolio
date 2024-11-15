@@ -894,7 +894,7 @@ footer a:hover {
 }
 
 .prright > div:hover {
-  background-color: #f4483f;
+  background-color: #ffecaa;
   transform: scale(1.05);
   transition: transform 0.3s ease-in-out;
 }
@@ -916,3 +916,44 @@ footer a:hover {
   transform: scale(1.05);
   transition: all 0.3s ease;
 }
+.box {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1.5s ease-in-out;
+  visibility: hidden; 
+}
+
+.box[data-animate="slide-in-left"] {
+  transform: translateX(-100%);
+}
+
+.box[data-animate="slide-in-right"] {
+  transform: translateX(100%);
+}
+
+.box[data-animate="fade-in"] {
+  transform: translateY(20px);
+}
+
+.box.animate {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+  visibility: visible;
+}
+
+.floating-box {
+  padding: 20px;
+  background-color: transparent;
+  color: #b12b24;
+  border-radius: 10px;
+  text-align: center;
+  animation: float 3s infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+
